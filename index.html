@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>親子で取り組むチックへの行動療法オンラインプログラム</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>親子で取り組むチックへの行動療法オンラインプログラム</h1>
+    <p>ご参加いただけるご家族を募集しています</p>
+    <img src="images/header.png" alt="プログラムのイメージ" />
+  </header>
+
+  <main>
+    <section>
+      <h2>研究の概要</h2>
+      <p>
+        本研究では、トゥレット症や慢性チック症を持つ9歳〜15歳のお子さまと保護者を対象に、
+        オンラインで実施する行動療法プログラム（CBIT）の効果を検証します。
+      </p>
+    </section>
+
+    <section>
+      <h2>参加条件のチェック</h2>
+      <form id="eligibility-form">
+        <label><input type="checkbox" class="eligibility-check" /> 9〜15歳でチックの診断を受けている</label><br />
+        <label><input type="checkbox" class="eligibility-check" /> チック症状が中等度以上である</label><br />
+        <label><input type="checkbox" class="eligibility-check" /> 過去6週間、治療内容に変更がない</label><br />
+        <label><input type="checkbox" class="eligibility-check" /> Zoomが使える端末と通信環境がある</label><br />
+        <label><input type="checkbox" class="eligibility-check" /> 保護者がプログラムに協力できる</label><br />
+        <label><input type="checkbox" class="eligibility-check" /> IQが85以上で、重度の精神疾患がない</label><br />
+        <label><input type="checkbox" class="eligibility-check" /> 過去にCBITを受けたことがない</label><br />
+        <button type="button" onclick="checkEligibility()">次へ進む</button>
+      </form>
+    </section>
+
+    <section id="entry-form" style="display: none">
+      <h2>研究参加申込フォーム</h2>
+      <form>
+        <label>お子さまの氏名：<input type="text" name="child_name" required /></label><br />
+        <label>生年月日：<input type="date" name="dob" required /></label><br />
+        <label>性別：
+          <select name="gender">
+            <option>男性</option>
+            <option>女性</option>
+            <option>その他</option>
+          </select>
+        </label><br />
+        <label>保護者の氏名：<input type="text" name="parent_name" required /></label><br />
+        <label>住所：<input type="text" name="address" required /></label><br />
+        <label>電話番号：<input type="tel" name="phone" required /></label><br />
+        <input type="submit" value="送信" />
+      </form>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <p>
+        白百合女子大学 発達心理学科<br />
+        講師：松田なつみ<br />
+        Email: example@example.ac.jp
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 オンラインCBIT研究</p>
+  </footer>
+
+  <script>
+    function checkEligibility() {
+      const checks = document.querySelectorAll('.eligibility-check');
+      const allChecked = Array.from(checks).every(c => c.checked);
+      if (allChecked) {
+        document.getElementById('entry-form').style.display = 'block';
+        window.scrollTo({ top: document.getElementById('entry-form').offsetTop, behavior: 'smooth' });
+      } else {
+        alert('すべての項目にチェックを入れてください。');
+      }
+    }
+  </script>
+</body>
+</html>

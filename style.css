@@ -1,0 +1,46 @@
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  background: #f4fbf9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #a8d5e2;
+  padding: 1em;
+  text-align: center;
+}
+header img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1em;
+}
+h1, h2 {
+  color: #2c6e91;
+}
+main {
+  padding: 1em 2em;
+}
+section {
+  margin-bottom: 2em;
+}
+form label {
+  display: block;
+  margin: 0.5em 0;
+}
+footer {
+  background: #2c6e91;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+button {
+  background: #4ab2c3;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1em;
+  cursor: pointer;
+}
